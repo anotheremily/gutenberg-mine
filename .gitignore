@@ -38,4 +38,3 @@ Thumbs.db
 assets/texts/downloads/
 assets/texts/www.gutenberg.org/
 *.pyc
-gbweb/templates/__init__.py
