@@ -1,0 +1,39 @@
+<section class="explanation">
+	<h2>About</h2>
+	<p>A subset of the texts hosted by Project Gutenberg were downloaded for this project. These books were parsed and imported 
+	into a Redis datastore. Each work was represented as a graph with nodes and edges. Each connection between two adjacent words 
+	was added as an edge, with another data structure, a super-edge, included the number of instances of a particular connection 
+	across all imported works.</p>
+
+	<p>GEXF (the Graph Exchange XML Format) provided a bridge between the graph stored in Redis and the front end of the application.
+	A Python script was written to export GEXF formatted subsets of the data for analysis. The data was imported and displayed with 
+	SigmaJS on a 2D canvas.</p>
+
+	<p>The primary text used for analysis is the King James translation of the Bible. The small, medium, and large datasets are the 
+	first <em>100</em>, <em>500</em>, and <em>2,500</em> unique words (tokens/nodes) from the text. For most operations, the small 
+	or medium datasets are recommended as many operations will be slow on the large and full datasets. The small dataset includes up
+	to Genesis 1:16 and the medium dataset includes up to Genesis 5:4. The large dataset includes text up to Genesis 46:16. The full 
+	dataset includes the entire text of the Bible.</p>
+
+	<p>The next phase of the project will involve including additional texts for comparison.</p>
+
+	<p>This tool allows you to visualize the relationships between words.</p>
+
+	<h2>Technology</h2>
+	<ul class="technologies">
+		<li>Front End
+			<ul>
+				<li><a href="http://www.html5rocks.com/en/">HTML5</a></li>
+				<li><a href="http://javascript.crockford.com/">JavaScript</a></li>
+				<li><a href="http://sigmajs.org/">SigmaJS</a> (with GEXF Plugin) (<a href="https://github.com/zyoung/sigma.js">custom fork</a> used for this project)</li>
+			</ul>
+		</li>
+		<li>Back End
+			<ul>
+				<li><a href="http://redis.io/">Redis</a></li>
+				<li><a href="http://www.python.org/">Python</a></li>
+				<li><a href="http://gexf.net/format/">GEXF</a> (Graph Exchange XML Format)</li>
+			</ul>
+		</li>
+	</ul>
+</section>

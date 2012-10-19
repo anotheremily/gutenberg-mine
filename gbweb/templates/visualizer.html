@@ -1,0 +1,61 @@
+<section class="settings">
+	<h2>Settings</h2>
+	<div>
+		<h3>Switch Dataset</h3>
+		<button class="toggle-data" data-dataset="small-data-set">Small (100 Nodes, 2,488 Edges)</button>
+		<button class="toggle-data" data-dataset="medium-data-set">Medium (500 Nodes, 24,207 Edges)</button>
+		<button class="toggle-data" data-dataset="large-data-set">Large (2,500 Nodes, 79,691 Edges)</button>
+		<button class="toggle-data" data-dataset="full-data-set">Full (13,904 Nodes, 166,427 Edges)</button>
+	</div>
+	<div>
+		<h3>Layout</h3>
+		<button id="toggle-layout">Activate Layout Organizer</button>
+		<button id="toggle-hover">Activate Hover Mode</button>
+		<button id="rescale-graph">Refresh Graph</button>
+	</div>
+	<div>
+		<h3>Node Removal:</h3>
+		<div>
+			<button class="remove-nodes" data-pct="25">Remove 25% of Nodes</button>
+			<button class="remove-nodes" data-pct="50">Remove 50% of Nodes</button>
+			<button class="remove-nodes" data-pct="75">Remove 75% of Nodes</button>
+			<button class="remove-nodes" data-pct="95">Remove 95% of Nodes</button>
+			<button id="remove-orphans" class="remove-orphans">Remove Orphans (Nodes without Edges)</button>
+		</div>
+		<div>
+			<span>Node to remove: </span>
+			<input type="text" name="remove-label-text" id="remove-label-text" value=""/>
+			<button id="remove-label">Remove Node</button>
+		</div>
+		<div>
+			<h3>Graph Subsets</h3>
+			<span>Start point:</span>
+			<input type="text" name="graph-start-text" id="graph-start-text" value=""/>
+			<span>Depth:</span>
+			<select name="graph-start-depth" id="graph-start-depth">
+				<option value="1">1
+				<option value="2">2
+				<option value="3">3
+				<option value="4">4
+				<option value="5">5
+				<option value="6">6
+				<option value="7">7
+				<option value="8">8
+				<option value="9">9
+				<option value="10">10
+			</select>
+			<button id="graph-start">Filter Graph</button>
+		</div>
+
+		<p><em>Note that some functions may execute slowly on a large graph.</em></p>
+	</div>
+</section>
+
+<section class="graph_holder">
+	<div id="gb_graph" class="graph"></div>	
+</section>
+
+<script src="static/js/underscore.min.js"></script>
+<script src="static/js/sigma.concat.js"></script>
+<script src="static/js/gb.js"></script>
+

@@ -25,3 +25,17 @@ pip-log.txt
 
 #Mr Developer
 .mr.developer.cfg
+
+# OS generated files #
+######################
+.DS_Store?
+.DS_Store
+ehthumbs.db
+Icon?
+Icon
+Thumbs.db
+
+assets/texts/downloads/
+assets/texts/www.gutenberg.org/
+*.pyc
+gae_gbweb/templates/__init__.py
